@@ -29,8 +29,9 @@ class MovieDetailScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(8.0),
                   width: 400,
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.red)),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.red),
+                      borderRadius: BorderRadius.circular(5)),
                   child: Column(
                     children: [
                       Padding(
@@ -53,19 +54,34 @@ class MovieDetailScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        
-                        width: 100,
-                        padding: const EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadius.circular(25)),
-                        child: Text(
-                          
-                          "เข้ารับชม",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      )
-                      
+                          width: 100,
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Center(
+                            child: Text(
+                              "เข้ารับชม",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          )),
                     ],
                   ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  margin: const EdgeInsets.all(8.0),
+                  width: 400,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.red),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Expanded(
+                        child: Text(
+                          movie.detail,
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontSize: 16.0, color: Colors.white),
+                        ),
+                      ),
                 )
               ]),
             ),
